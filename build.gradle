@@ -37,7 +37,7 @@ def gitHeadName = { ->
 }
 
 def getVersion = { ->
-    def version = '1.1.0';
+    def version = '1.0.0';
     if(gitHeadName().equals('v'+version))
         return version;
     if(gitHeadName().equals('main'))
@@ -103,7 +103,7 @@ publishing {
             from components.java
             pom {
                 name = "${pomArtifactId}"
-                description = 'Yet another framework-agnostic skyhook dependency injection implementation'
+                description = 'Yet another framework-agnostic tarjan scc detection algorithm implementation for Java applications'
                 url = 'https://www.yalibs.dk'
                 licenses {
                     license {
@@ -145,5 +145,3 @@ signing {
     sign publishing.publications.mavenJava
     // sign configurations.archives
 }
-
-
